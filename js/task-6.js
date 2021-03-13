@@ -8,7 +8,7 @@ inputRef.addEventListener('focus', handleInputFocus);
 
 function handleInputBlur(event) {
     const validValue = event.target.getAttribute("data-length");
-    if (event.target.value.length < validValue) {
+    if (event.target.value.length !== validValue) {
         event.target.classList.add('invalid');
 
     } else {
@@ -29,7 +29,7 @@ function handleInputFocus(event) {
 //ВЕРСИЯ БЕЗ СЛУШАТЕЛЯ НА ФОКУС
 // function handleInputBlur(event) {
 //     const validValue = event.target.getAttribute("data-length");
-//     if (event.target.value.length < validValue) {
+//     if (event.target.value.length !== validValue) {
 //         if (event.target.classList.contains('valid')) {
 //             event.target.classList.replace('valid', 'invalid');
 //         } else {
